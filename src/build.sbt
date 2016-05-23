@@ -1,8 +1,6 @@
-name := """sena"""
+name := """sena-core"""
 
-version := "1.0.0-core1.0"
-
-lazy val root = (project in file(".")).enablePlugins(PlayJava)
+version := "1.0.0-1.0"
 
 scalaVersion := "2.11.6"
 
