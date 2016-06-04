@@ -40,6 +40,9 @@ public class AppLogger {
 	/** {@code MDC}フォーマット定義（【注意】スレッドローカルな為、キー使用後は必ず{@link #removeMDC(String)}メソッドを呼び出し破棄する）：クラスのソースコードファイル名、行番号を出力する。 */
 	public static final String MDC_FORMAT_KEY_FILELINE  = "fileline";
 
+	/** {@code MDC}フォーマット定義（【注意】スレッドローカルな為、キー使用後は必ず{@link #removeMDC(String)}メソッドを呼び出し破棄する）：セッションID（ユーザーID等） */
+	public static final String MDC_FORMAT_KEY_SID = "sid";
+
 	/** Logger定義 */
 	private static Logger MY_LOGGER = (Logger) LoggerFactory.getLogger(APP_LOGGER_NAME);
 
@@ -150,6 +153,27 @@ public class AppLogger {
 	}
 
 	/**
+	 * ログレベル{@code WARN}の出力を行う。
+	 * <p>出力定義
+	 * <ul>
+	 * <li>パラメータ系の異常データ
+	 * <li>バリデーションエラー
+	 * </ul>
+	 * @param message ログ出力メッセージ
+	 * @param t Throwable
+	 * @since 1.1
+	 */
+	public static void warn(String message, Throwable t) {
+		if (MY_LOGGER.isWarnEnabled()) {
+			putMDC(MDC_FORMAT_KEY_FILELINE, printFileLine());
+			MY_LOGGER.error(message, t);
+
+			// キーの破棄
+			removeMDC(MDC_FORMAT_KEY_FILELINE);
+		}
+	}
+
+	/**
 	 * ログレベル{@code INFO}の出力を行う。
 	 * <p>出力定義
 	 * <ul>
@@ -195,7 +219,7 @@ public class AppLogger {
 	 * @param val 値
 	 * @since 1.0
 	 */
-	private static void putMDC(String key, String val) {
+	public static void putMDC(String key, String val) {
 		if (StringUtils.isEmptyWithTrim(key)) {
 			return;
 		}
@@ -207,7 +231,7 @@ public class AppLogger {
 	 * @param key キー
 	 * @since 1.0
 	 */
-	private static void removeMDC(String key) {
+	public static void removeMDC(String key) {
 		if (StringUtils.isEmptyWithTrim(key)) {
 			return;
 		}

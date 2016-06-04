@@ -80,4 +80,32 @@ public class AppConsts {
 		return null;
 	}
 
+	/** 取引種別：1..国内株式 */
+	public static final Integer STOCKS_TYPE_1 = 1;
+	/** 取引種別：2..金額・株数指定取引 */
+	public static final Integer STOCKS_TYPE_2 = 2;
+	/** 取引種別：3..信用建玉（買建） */
+	public static final Integer STOCKS_TYPE_3 = 3;
+	/** 取引種別：4..信用建玉（売建） */
+	public static final Integer STOCKS_TYPE_4 = 4;
+
+	/** 取引種別：1..国内株式 */
+	public static final String STOCKS_TYPE_STR_1 = "国内株式";
+	/** 取引種別：2..金額・株数指定取引 */
+	public static final String STOCKS_TYPE_STR_2 = "金額・株数指定取引";
+	/** 取引種別：3..信用建玉（買建） */
+	public static final String STOCKS_TYPE_STR_3 = "信用建玉（買建）";
+	/** 取引種別：4..信用建玉（売建） */
+	public static final String STOCKS_TYPE_STR_4 = "信用建玉（売建）";
+
+	/** 取引種別：マッピング */
+	public static final Map<Integer, String> STOCKS_TYPE_MAP = Collections.unmodifiableMap(new HashMap<Integer, String>() {
+		{
+			put(STOCKS_TYPE_1, STOCKS_TYPE_STR_1);
+			put(STOCKS_TYPE_2, STOCKS_TYPE_STR_2);
+			put(STOCKS_TYPE_3, STOCKS_TYPE_STR_3);
+			put(STOCKS_TYPE_4, STOCKS_TYPE_STR_4);
+		}
+	});
+
 }
