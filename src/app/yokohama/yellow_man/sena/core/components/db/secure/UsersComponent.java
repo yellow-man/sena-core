@@ -12,7 +12,7 @@ import yokohama.yellow_man.sena.core.models.secure.Users;
 public class UsersComponent extends UsersDao {
 
 	/**
-	 * ユーザー（userss）作成する。
+	 * ユーザー（users）作成する。
 	 * @param accountId アカウントID
 	 * @param password パスワード
 	 * @param nickname ニックネーム
@@ -21,5 +21,20 @@ public class UsersComponent extends UsersDao {
 	 */
 	public static Users create(String accountId, String password, String nickname) {
 		return UsersDao.create(accountId, password, nickname);
+	}
+
+	/**
+	 * アクセストークンを指定し、ユーザー情報を取得する。
+	 * @param accessToken アクセストークン
+	 * @return 取得したユーザー情報を返す。
+	 * @since 1.1
+	 */
+	public static Users getUsersByAccessToken(String accessToken) {
+		Users users = Users.find.where()
+				.eq("delete_flg", false)
+				.eq("access_token", accessToken)
+				.findUnique();
+
+		return users;
 	}
 }
