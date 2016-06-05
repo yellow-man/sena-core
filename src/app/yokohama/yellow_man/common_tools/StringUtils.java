@@ -1,5 +1,9 @@
 package yokohama.yellow_man.common_tools;
 
+import org.slf4j.LoggerFactory;
+
+import ch.qos.logback.classic.Logger;
+
 /**
  * 文字列操作に関する機能を提供します。
  *
@@ -7,6 +11,9 @@ package yokohama.yellow_man.common_tools;
  * @since 1.0
  */
 public class StringUtils {
+
+	/** Logger定義 */
+	private static Logger LOGGER = (Logger) LoggerFactory.getLogger(StringUtils.class.getName());
 
 	/**
 	 * 引数{@code value}の値が{@code null}または、

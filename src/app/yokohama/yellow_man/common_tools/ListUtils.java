@@ -2,6 +2,10 @@ package yokohama.yellow_man.common_tools;
 
 import java.util.List;
 
+import org.slf4j.LoggerFactory;
+
+import ch.qos.logback.classic.Logger;
+
 /**
  * リスト操作に関する機能を提供します。
  *
@@ -9,6 +13,9 @@ import java.util.List;
  * @since 1.0
  */
 public class ListUtils {
+
+	/** Logger定義 */
+	private static Logger LOGGER = (Logger) LoggerFactory.getLogger(ListUtils.class.getName());
 
 	/**
 	 * 引数の{@code list}要素をカンマ区切りの文字列として返します。

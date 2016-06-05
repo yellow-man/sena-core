@@ -3,6 +3,10 @@ package yokohama.yellow_man.common_tools;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.LoggerFactory;
+
+import ch.qos.logback.classic.Logger;
+
 /**
  * オブジェクトチェックに関する機能を提供します。
  *
@@ -10,6 +14,9 @@ import java.util.Map;
  * @since 1.0
  */
 public class CheckUtils {
+
+	/** Logger定義 */
+	private static Logger LOGGER = (Logger) LoggerFactory.getLogger(CheckUtils.class.getName());
 
 	/**
 	 * 引数の{@code list}が{@code null}または、

@@ -5,6 +5,10 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+import org.slf4j.LoggerFactory;
+
+import ch.qos.logback.classic.Logger;
+
 /**
  * 日付操作に関する機能を提供します。
  *
@@ -12,6 +16,9 @@ import java.util.GregorianCalendar;
  * @since 1.0
  */
 public class DateUtils {
+
+	/** Logger定義 */
+	private static Logger LOGGER = (Logger) LoggerFactory.getLogger(DateUtils.class.getName());
 
 	/** 日付フォーマット：yyyy/MM/dd HH:mm */
 	public static final String DATE_FORMAT_YYYY_MM_DD_HH_MM_SS  = "yyyy/MM/dd HH:mm:ss";
@@ -71,10 +78,11 @@ public class DateUtils {
 			sdf.setLenient(false);
 			String reverse = sdf.format(date);
 			if (!dateStr.equals(reverse)) {
+				LOGGER.warn("日付変換に失敗しました。：dateStr=" + dateStr + ", reverse=" + reverse);
 				return null;
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			LOGGER.warn("日付変換に失敗しました。", e);
 			return null;
 		}
 		return date;

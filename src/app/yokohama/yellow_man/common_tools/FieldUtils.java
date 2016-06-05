@@ -6,12 +6,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.LoggerFactory;
+
+import ch.qos.logback.classic.Logger;
+
 /**
  * フィールド操作に関する機能を提供します。
  * @author yellow-man
  * @since 1.0
  */
 public class FieldUtils {
+
+	/** Logger定義 */
+	private static Logger LOGGER = (Logger) LoggerFactory.getLogger(FieldUtils.class.getName());
 
 	/**
 	 * オブジェクトのプロパティ変数名をキーとし、変数の値を値とした新たな{@code Map}を返します。
@@ -43,10 +50,8 @@ public class FieldUtils {
 				}
 
 				retMap.put(name, (f.get(obj) == null) ? null : f.get(obj));
-			} catch (IllegalArgumentException e) {
-				e.printStackTrace();
-			} catch (IllegalAccessException e) {
-				e.printStackTrace();
+			} catch (Exception e) {
+				LOGGER.warn("オブジェクトのマッピングに失敗しました。", e);
 			}
 		}
 		return retMap;
@@ -107,12 +112,8 @@ public class FieldUtils {
 					}
 				}
 
-			} catch (IllegalArgumentException e) {
-				e.printStackTrace();
-			} catch (IllegalAccessException e) {
-				e.printStackTrace();
 			} catch (Exception e) {
-				e.printStackTrace();
+				LOGGER.warn("オブジェクトの文字列生成に失敗しました。", e);
 			}
 		}
 		if (fieldBuff.length() > 1) {

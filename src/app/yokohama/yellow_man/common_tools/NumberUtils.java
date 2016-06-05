@@ -2,6 +2,10 @@ package yokohama.yellow_man.common_tools;
 
 import java.math.BigDecimal;
 
+import org.slf4j.LoggerFactory;
+
+import ch.qos.logback.classic.Logger;
+
 /**
  * 数値操作に関する機能を提供します。
  *
@@ -9,6 +13,9 @@ import java.math.BigDecimal;
  * @since 1.0
  */
 public class NumberUtils {
+
+	/** Logger定義 */
+	private static Logger LOGGER = (Logger) LoggerFactory.getLogger(NumberUtils.class.getName());
 
 	/**
 	 * 引数の文字列を{@link BigDecimal}型に変換します。
@@ -40,7 +47,8 @@ public class NumberUtils {
 		}
 		try {
 			return new BigDecimal(str);
-		} catch (Exception nfe) {
+		} catch (Exception e) {
+			LOGGER.warn("変換に失敗しました。", e);
 		}
 		if (defaultValue == null) {
 			return null;
