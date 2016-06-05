@@ -1,40 +1,27 @@
 package yokohama.yellow_man.sena.core.components.db.secure;
 
-import yokohama.yellow_man.sena.core.components.db.secure.dao.UsersDao;
-import yokohama.yellow_man.sena.core.models.secure.Users;
+import java.util.List;
+
+import yokohama.yellow_man.sena.core.components.db.secure.dao.AccountStocksDao;
+import yokohama.yellow_man.sena.core.models.secure.AccountStocks;
 
 /**
- * ユーザー（users）モデルの操作を行うコンポーネントクラス。
+ * 口座銘柄（account_stocks）モデルの操作を行うコンポーネントクラス。
  *
  * @author yellow-man
- * @since 1.0
+ * @since 1.1
  */
-public class AccountStocksComponent extends UsersDao {
+public class AccountStocksComponent extends AccountStocksDao {
 
 	/**
-	 * ユーザー（users）作成する。
-	 * @param accountId アカウントID
-	 * @param password パスワード
-	 * @param nickname ニックネーム
-	 * @return 作成したユーザーモデルを返す。
+	 * 口座銘柄（account_stocks）モデルのバルクインサートを行う。
+	 *
+	 * @param list バルクインサート対象リスト
+	 * @return INSERT結果件数を返す。
 	 * @since 1.1
+	 * @see AccountStocksDao#executeBulkInsert(List)
 	 */
-	public static Users create(String accountId, String password, String nickname) {
-		return UsersDao.create(accountId, password, nickname);
-	}
-
-	/**
-	 * アクセストークンを指定し、ユーザー情報を取得する。
-	 * @param accessToken アクセストークン
-	 * @return 取得したユーザー情報を返す。
-	 * @since 1.1
-	 */
-	public static Users getUsersByAccessToken(String accessToken) {
-		Users users = Users.find.where()
-				.eq("delete_flg", false)
-				.eq("access_token", accessToken)
-				.findUnique();
-
-		return users;
+	public static int executeBulkInsert(List<AccountStocks> list) {
+		return AccountStocksDao.executeBulkInsert(list);
 	}
 }
