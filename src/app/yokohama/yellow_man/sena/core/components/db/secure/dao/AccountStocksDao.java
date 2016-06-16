@@ -29,7 +29,7 @@ public class AccountStocksDao {
 
 		// SQLテンプレート作成
 		StringBuffer sqlStringBuffer =
-				new StringBuffer("INSERT INTO account_stocks (users_id, acquisition_datetime, stock_code, type, closing_date, closing_flg, amount, average_cost, current_value, market_value, gain_loss, gain_loss_rate, created, modified, delete_flg) VALUES ");
+				new StringBuffer("INSERT INTO account_stocks (users_id, acquisition_datetime, stock_code, type, closing_date, closing_flg, amount, average_cost, current_value, market_value, profit_loss, profit_loss_rate, created, modified, delete_flg) VALUES ");
 
 		for (int i = 0; i < list.size(); i++) {
 			if (0 == i) {
@@ -48,8 +48,8 @@ public class AccountStocksDao {
 				.append(":average_cost_").append(i).append(", ")
 				.append(":current_value_").append(i).append(", ")
 				.append(":market_value_").append(i).append(", ")
-				.append(":gain_loss_").append(i).append(", ")
-				.append(":gain_loss_rate_").append(i).append(", ")
+				.append(":profit_loss_").append(i).append(", ")
+				.append(":profit_loss_rate_").append(i).append(", ")
 				.append(":created_").append(i).append(", ")
 				.append(":modified_").append(i).append(", ")
 				.append(":delete_flg_").append(i)
@@ -70,8 +70,8 @@ public class AccountStocksDao {
 			sqlUpdate.setParameter("average_cost_" + j, items.averageCost);
 			sqlUpdate.setParameter("current_value_" + j, items.currentValue);
 			sqlUpdate.setParameter("market_value_" + j, items.marketValue);
-			sqlUpdate.setParameter("gain_loss_" + j, items.gainLoss);
-			sqlUpdate.setParameter("gain_loss_rate_" + j, items.gainLossRate);
+			sqlUpdate.setParameter("profit_loss_" + j, items.profitLoss);
+			sqlUpdate.setParameter("profit_loss_rate_" + j, items.profitLossRate);
 			sqlUpdate.setParameter("created_" + j, items.created);
 			sqlUpdate.setParameter("modified_" + j, items.modified);
 			sqlUpdate.setParameter("delete_flg_" + j, items.deleteFlg);

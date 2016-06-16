@@ -57,12 +57,12 @@ public class AccountStocks extends AppSecureModel {
 	public BigDecimal marketValue;
 
 	/** 評価損益（「（保有株数 * 現在値） - （保有株数 * 平均取得単価）」で算出された値、整数部：15桁、小数部：10桁） */
-	@Column(name = "gain_loss")
-	public BigDecimal gainLoss;
+	@Column(name = "profit_loss")
+	public BigDecimal profitLoss;
 
 	/** 損益率（「（評価損益 / （保有株数 * 現在値）） * 100」で算出された値、整数部：8桁、小数部：2桁） */
-	@Column(name = "gain_loss_rate")
-	public BigDecimal gainLossRate;
+	@Column(name = "profit_loss_rate")
+	public BigDecimal profitLossRate;
 
 	/** 検索用 */
 	public static Finder<Long, AccountStocks> find =
