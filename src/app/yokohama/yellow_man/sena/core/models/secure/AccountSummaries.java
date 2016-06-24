@@ -60,11 +60,11 @@ public class AccountSummaries extends AppSecureModel {
 	@Column(name = "open_interest")
 	public Long openInterest;
 
-	/** 委託保証金率 */
+	/** 委託保証金率（整数部：8桁、小数部：2桁） */
 	@Column(name = "maintenance_requirement")
 	public BigDecimal maintenanceRequirement;
 
-	/** 参考委託保証金率 */
+	/** 参考委託保証金率（整数部：8桁、小数部：2桁） */
 	@Column(name = "ref_maintenance_requirement")
 	public BigDecimal refMaintenanceRequirement;
 
@@ -78,7 +78,7 @@ public class AccountSummaries extends AppSecureModel {
 
 	/** 株式 */
 	@Column(name = "asset_value")
-	public BigDecimal assetValue;
+	public Long assetValue;
 
 	/** 建玉評価損益額 */
 	@Column(name = "margin_profit_loss")
@@ -86,7 +86,7 @@ public class AccountSummaries extends AppSecureModel {
 
 	/** 計 */
 	@Column(name = "account_balance")
-	public BigDecimal accountBalance;
+	public Long accountBalance;
 
 	/** 検索用 */
 	public static Finder<Long, AccountSummaries> find =
