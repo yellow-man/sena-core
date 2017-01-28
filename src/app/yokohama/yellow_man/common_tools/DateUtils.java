@@ -60,7 +60,6 @@ public class DateUtils {
 		return cal.getTime();
 	}
 
-
 	/**
 	 * 引数{@code dateStr}を引数指定フォーマット{@code formatStr}で{@link Date}に変換します。
 	 * 変換に失敗した場合は、{@code null}を返します。
@@ -87,7 +86,6 @@ public class DateUtils {
 		}
 		return date;
 	}
-
 
 	/**
 	 * 引数{@code date}に対する年を取得します。
@@ -127,7 +125,6 @@ public class DateUtils {
 		cal.setTime(date);
 		return cal.get(Calendar.DATE);
 	}
-
 
 	/**
 	 * 引数年{@code year}、月{@code month}、日{@code day}を指定し、日付を取得します。
@@ -176,7 +173,6 @@ public class DateUtils {
 		return cal.getTime();
 	}
 
-
 	/**
 	 * 引数{@code date}に対して、時{@code hour}、分{@code min}、秒{@code sec}を指定し、日付を取得します。
 	 * @param date 日付
@@ -203,5 +199,11 @@ public class DateUtils {
 	 */
 	public static Date getJustDate(Date date) {
 		return getDate(date, 0, 0, 0);
+	}
+
+	public static String toString(Date date, String formatStr) {
+		SimpleDateFormat sdf = new SimpleDateFormat(formatStr);
+		String dateStr = sdf.format(date);
+		return dateStr;
 	}
 }

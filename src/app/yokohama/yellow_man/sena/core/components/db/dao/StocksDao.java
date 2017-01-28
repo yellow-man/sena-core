@@ -11,7 +11,7 @@ import yokohama.yellow_man.sena.core.models.Stocks;
 
 /**
  * 銘柄（stocks）モデルのネイティブクエリによる操作クラス。
- * <p>アプリケーションとは祖結合としたい為、直接の参照は行わない。
+ * <p>アプリケーションとは疎結合としたい為、直接の参照は行わない。
  * <br>利用する場合、{@link StocksComponent}を経由しアクセスする。
  *
  * @author yellow-man
