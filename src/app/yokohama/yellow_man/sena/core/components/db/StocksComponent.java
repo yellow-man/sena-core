@@ -1,5 +1,6 @@
 package yokohama.yellow_man.sena.core.components.db;
 
+import java.util.Date;
 import java.util.List;
 
 import com.avaje.ebean.Ebean;
@@ -49,6 +50,26 @@ public class StocksComponent extends StocksDao {
 				Ebean.find(Stocks.class)
 					.where()
 					.eq("delete_flg", false)
+					.orderBy("id ASC")
+					.findList();
+
+		return retList;
+	}
+
+	/**
+	 * 検索条件に取得日（{@code date}）を指定し、
+	 * 未削除の銘柄（stocks）情報一覧を返す。
+	 *
+	 * @param date 取得日
+	 * @return 未削除の銘柄（stocks）情報一覧
+	 * @since 1.0
+	 */
+	public static List<Stocks> getStocksListByDate(Date date) {
+		List<Stocks> retList =
+				Ebean.find(Stocks.class)
+					.where()
+					.eq("delete_flg", false)
+					.eq("date", date)
 					.orderBy("id ASC")
 					.findList();
 

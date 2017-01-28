@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import play.Play;
+
 /**
  * 参照するアプリケーション全体で利用する定数定義クラス。
  * @author yellow-man
@@ -107,5 +109,22 @@ public class AppConsts {
 			put(STOCKS_TYPE_4, STOCKS_TYPE_STR_4);
 		}
 	});
+
+	/** キャッシュ時間(秒：デフォルト1分) super_short （{@code application.conf}ファイル{@code cachetime.super_short}キーにて値の変更可。） */
+	public static final int CACHE_TIME_SUPER_SHORT			= Play.application().configuration().getInt("cachetime.super_short",         60);
+	/** キャッシュ時間(秒：デフォルト3分) short （{@code application.conf}ファイル{@code cachetime.short}キーにて値の変更可。） */
+	public static final int CACHE_TIME_SHORT				= Play.application().configuration().getInt("cachetime.short",              180);
+	/** キャッシュ時間(秒：デフォルト10分) middle （{@code application.conf}ファイル{@code cachetime.middle}キーにて値の変更可。） */
+	public static final int CACHE_TIME_MIDDLE				= Play.application().configuration().getInt("cachetime.middle",             600);
+	/** キャッシュ時間(秒：デフォルト30分) short_long （{@code application.conf}ファイル{@code cachetime.short_long}キーにて値の変更可。） */
+	public static final int CACHE_TIME_SHORT_LONG 			= Play.application().configuration().getInt("cachetime.short_long",        1800);
+	/** キャッシュ時間(秒：デフォルト1時間) long （{@code application.conf}ファイル{@code cachetime.long}キーにて値の変更可。） */
+	public static final int CACHE_TIME_LONG 				= Play.application().configuration().getInt("cachetime.long",              3600);
+	/** キャッシュ時間(秒：デフォルト1日) long （{@code application.conf}ファイル{@code cachetime.middle_long}キーにて値の変更可。） */
+	public static final int CACHE_TIME_MIDDLE_LONG 			= Play.application().configuration().getInt("cachetime.middle_long",      86400);
+	/** キャッシュ時間(秒：デフォルト1週間) super_long_long （{@code application.conf}ファイル{@code cachetime.super_long_long}キーにて値の変更可。） */
+	public static final int CACHE_TIME_SUPER_LONG_LONG		= Play.application().configuration().getInt("cachetime.super_long_long", 604800);
+	/** 無期限キャッシュ （{@code application.conf}ファイル{@code cachetime.no_limit}キーにて値の変更可。） */
+	public static final int CACHE_TIME_NO_LIMIT				= Play.application().configuration().getInt("cachetime.no_limit",             0);
 
 }
