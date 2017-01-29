@@ -13,6 +13,7 @@ import yokohama.yellow_man.sena.core.models.Stocks;
  *
  * @author yellow-man
  * @since 1.0
+ * @see yokohama.yellow_man.sena.core.components.db.dao.StocksDao
  */
 public class StocksComponent extends StocksDao {
 
