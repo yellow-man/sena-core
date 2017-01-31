@@ -1,6 +1,8 @@
 package yokohama.yellow_man.sena.core.components.db;
 
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import com.avaje.ebean.Ebean;
 
@@ -39,4 +41,43 @@ public class DebitBalancesComponent {
 		return retList;
 	}
 
+	/**
+	 * 検索条件に公開日（{@code release_date}）を指定し、
+	 * 未削除の信用残（debit_balances）情報一覧を返す。
+	 *
+	 * @param releaseDate 公表日
+	 * @return 未削除の信用残（debit_balances）情報一覧
+	 * @since 1.0
+	 */
+	public static List<DebitBalances> getDebitBalancesListByDate(Date releaseDate) {
+		List<DebitBalances> retList =
+				Ebean.find(DebitBalances.class)
+					.where()
+					.eq("delete_flg", false)
+					.eq("release_date", releaseDate)
+					.orderBy("id ASC")
+					.findList();
+
+		return retList;
+	}
+
+	/**
+	 * 検索条件に公表日（{@code release_date}）を指定し、
+	 * 未削除の信用残（debit_balances）情報一覧をマップで返す。
+	 *
+	 * @param releaseDate 公表日
+	 * @return 未削除の信用残（debit_balances）情報一覧 Map<銘柄コード, 信用残>
+	 * @since 1.0
+	 */
+	public static Map<Integer, DebitBalances> getDebitBalancesMapByDate(Date releaseDate) {
+		Map<Integer, DebitBalances> retMap =
+				Ebean.find(DebitBalances.class)
+					.where()
+					.eq("delete_flg", false)
+					.eq("release_date", releaseDate)
+					.orderBy("id ASC")
+					.findMap("stockCode", Integer.class);
+
+		return retMap;
+	}
 }
