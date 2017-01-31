@@ -16,7 +16,7 @@ import javax.persistence.Entity;
 @Entity
 public class DebitBalances extends AppModel {
 
-	/** 公開日 */
+	/** 公表日 */
 	@Column(name = "release_date")
 	public Date releaseDate;
 
