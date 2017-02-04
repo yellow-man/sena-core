@@ -11,7 +11,7 @@ import play.Play;
 /**
  * 参照するアプリケーション全体で利用する定数定義クラス。
  * @author yellow-man
- * @since 1.0
+ * @since 1.0.0
  */
 public class AppConsts {
 
@@ -67,7 +67,7 @@ public class AppConsts {
 	 * 決算期タイプを取得する。
 	 * @param str 決算種別を表す文字列
 	 * @return 決算種別
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static Integer getSettlementType(String str){
 		if(str.indexOf("通期") > -1){

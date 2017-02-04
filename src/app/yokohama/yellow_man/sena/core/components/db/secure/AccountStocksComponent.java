@@ -9,7 +9,7 @@ import yokohama.yellow_man.sena.core.models.secure.AccountStocks;
  * 口座銘柄（account_stocks）モデルの操作を行うコンポーネントクラス。
  *
  * @author yellow-man
- * @since 1.1
+ * @since 1.0.0
  */
 public class AccountStocksComponent extends AccountStocksDao {
 
@@ -18,7 +18,7 @@ public class AccountStocksComponent extends AccountStocksDao {
 	 *
 	 * @param list バルクインサート対象リスト
 	 * @return INSERT結果件数を返す。
-	 * @since 1.1
+	 * @since 1.0.0
 	 * @see AccountStocksDao#executeBulkInsert(List)
 	 */
 	public static int executeBulkInsert(List<AccountStocks> list) {

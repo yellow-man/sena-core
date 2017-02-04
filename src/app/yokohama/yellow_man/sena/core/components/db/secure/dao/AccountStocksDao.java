@@ -15,7 +15,7 @@ import yokohama.yellow_man.sena.core.models.secure.AppSecureModel;
  * <br>利用する場合、{@link AccountStocksComponent}を経由しアクセスする。
  *
  * @author yellow-man
- * @since 1.1
+ * @since 1.0.0
  */
 public class AccountStocksDao {
 
@@ -23,7 +23,7 @@ public class AccountStocksDao {
 	 * 口座銘柄（account_stocks）モデルのバルクインサートを行う。
 	 * @param list バルクインサート対象リスト
 	 * @return INSERT結果件数を返す。
-	 * @since 1.1
+	 * @since 1.0.0
 	 */
 	protected static int executeBulkInsert(List<AccountStocks> list) {
 

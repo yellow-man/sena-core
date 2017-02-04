@@ -17,7 +17,7 @@ import yokohama.yellow_man.sena.core.models.secure.Users;
  * <br>利用する場合、{@link UsersComponent}を経由しアクセスする。
  *
  * @author yellow-man
- * @since 1.1
+ * @since 1.0.0
  */
 public class UsersDao {
 
@@ -27,7 +27,7 @@ public class UsersDao {
 	 * @param password パスワード
 	 * @param nickname ニックネーム
 	 * @return 作成したユーザーモデルを返す。
-	 * @since 1.1
+	 * @since 1.0.0
 	 */
 	protected static Users create(String accountId, String password, String nickname) {
 		String sql = "INSERT INTO users (account_id, password, nickname, access_token, use_datetime, created, modified) "

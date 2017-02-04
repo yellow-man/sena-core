@@ -10,7 +10,7 @@ import ch.qos.logback.classic.Logger;
  * リスト操作に関する機能を提供します。
  *
  * @author yellow-man
- * @since 1.0
+ * @since 1.0.0
  */
 public class ListUtils {
 
@@ -22,6 +22,7 @@ public class ListUtils {
 	 * 値が{@code null}または、{@code empty}の場合、空文字列（ブランク）を返します。
 	 * @param list リスト
 	 * @return カンマ区切りの文字列。
+	 * @since 1.0.0
 	 */
 	public static String toString(List<?> list) {
 		if (CheckUtils.isEmpty(list)) {

@@ -9,7 +9,7 @@ import javax.persistence.Entity;
  * ユーザー（users）モデル。
  *
  * @author yellow-man
- * @since 1.1
+ * @since 1.0.0
  */
 @SuppressWarnings("serial")
 @Entity

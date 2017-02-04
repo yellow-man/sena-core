@@ -12,7 +12,7 @@ import yokohama.yellow_man.sena.core.models.Stocks;
  * 銘柄（stocks）モデルの操作を行うコンポーネントクラス。
  *
  * @author yellow-man
- * @since 1.0
+ * @since 1.0.0
  * @see yokohama.yellow_man.sena.core.components.db.dao.StocksDao
  */
 public class StocksComponent extends StocksDao {
@@ -22,7 +22,7 @@ public class StocksComponent extends StocksDao {
 	 *
 	 * @param list バルクインサート対象リスト
 	 * @return INSERT結果件数を返す。
-	 * @since 1.0
+	 * @since 1.0.0
 	 * @see StocksDao#executeBulkInsert(List)
 	 */
 	public static int executeBulkInsert(List<Stocks> list) {
@@ -33,7 +33,7 @@ public class StocksComponent extends StocksDao {
 	 * 銘柄（stocks）の削除フラグ無効（{@code false}）のレコードを全件削除（{@code true}）する。
 	 *
 	 * @return UPDATE結果件数を返す。
-	 * @since 1.0
+	 * @since 1.0.0
 	 * @see StocksDao#deleteAll()
 	 */
 	public static int deleteAll() {
@@ -44,7 +44,7 @@ public class StocksComponent extends StocksDao {
 	 * 未削除の銘柄（stocks）情報一覧を返す。
 	 *
 	 * @return 未削除の銘柄（stocks）情報一覧
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static List<Stocks> getStocksList() {
 		List<Stocks> retList =
@@ -63,7 +63,7 @@ public class StocksComponent extends StocksDao {
 	 *
 	 * @param date 取得日
 	 * @return 未削除の銘柄（stocks）情報一覧
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static List<Stocks> getStocksListByDate(Date date) {
 		List<Stocks> retList =

@@ -14,7 +14,7 @@ import yokohama.yellow_man.sena.core.models.Stocks;
  * 銘柄情報を保持する。
  *
  * @author yellow-man
- * @since 1.0
+ * @since 1.0.0
  */
 @SuppressWarnings("serial")
 @Entity @Table(name="company_schedules")

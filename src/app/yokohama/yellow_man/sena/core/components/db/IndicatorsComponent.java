@@ -12,7 +12,7 @@ import yokohama.yellow_man.sena.core.models.Indicators;
  * 指標（indicators）モデルの操作を行うコンポーネントクラス。
  *
  * @author yellow-man
- * @since 1.0
+ * @since 1.0.0
  */
 public class IndicatorsComponent {
 
@@ -22,7 +22,7 @@ public class IndicatorsComponent {
 	 *
 	 * @param date 取得日
 	 * @return 未削除の指標（indicators）情報一覧
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static List<Indicators> getIndicatorsListByDate(Date date) {
 		List<Indicators> retList =
@@ -42,7 +42,7 @@ public class IndicatorsComponent {
 	 *
 	 * @param date 取得日
 	 * @return 未削除の指標（indicators）情報一覧 Map<銘柄コード, 指標>
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static Map<Integer, Indicators> getIndicatorsMapByDate(Date date) {
 		Map<Integer, Indicators> retMap =

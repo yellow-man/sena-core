@@ -9,7 +9,7 @@ import yokohama.yellow_man.sena.core.models.AppModel;
  * <p>各Secureモデルはこのクラスを継承する。
  *
  * @author yellow-man
- * @since 1.1
+ * @since 1.0.0
  */
 @MappedSuperclass
 @SuppressWarnings("serial")
@@ -21,7 +21,7 @@ public class AppSecureModel extends AppModel {
 	/**
 	 * 保存。
 	 * @see play.db.ebean.Model#save()
-	 * @since 1.1
+	 * @since 1.0.0
 	 */
 	@Override
 	public void save() {
@@ -31,7 +31,7 @@ public class AppSecureModel extends AppModel {
 	/**
 	 * 更新。
 	 * @see play.db.ebean.Model#update()
-	 * @since 1.1
+	 * @since 1.0.0
 	 */
 	@Override
 	public void update() {
@@ -41,7 +41,7 @@ public class AppSecureModel extends AppModel {
 	/**
 	 * 削除フラグを立てて更新。
 	 * @see play.db.ebean.Model#delete()
-	 * @since 1.1
+	 * @since 1.0.0
 	 */
 	public void delete() {
 		this.deleteFlg = true;

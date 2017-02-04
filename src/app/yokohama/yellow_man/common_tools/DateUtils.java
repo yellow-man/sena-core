@@ -13,7 +13,7 @@ import ch.qos.logback.classic.Logger;
  * 日付操作に関する機能を提供します。
  *
  * @author yellow-man
- * @since 1.0
+ * @since 1.0.0
  */
 public class DateUtils {
 
@@ -50,7 +50,7 @@ public class DateUtils {
 	 * @param date 加算（減算）対象の日付
 	 * @param day 加算（負数の場合減算）する日数
 	 * @return 加算（減算）結果の日付
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static Date addDay(Date date, int day) {
 		Calendar cal = Calendar.getInstance();
@@ -67,7 +67,7 @@ public class DateUtils {
 	 * @param dateStr 日付文字列
 	 * @param formatStr 日付フォーマット
 	 * @return 変換後の{@link Date}オブジェクト（変換に失敗した場合は、{@code null}を返します。）
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static Date toDate(String dateStr, String formatStr) {
 		Date date = null;
@@ -92,7 +92,7 @@ public class DateUtils {
 	 *
 	 * @param date 取得対象の日付
 	 * @return 年を取得
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static int getYear(Date date) {
 		Calendar cal = Calendar.getInstance();
@@ -105,7 +105,7 @@ public class DateUtils {
 	 *
 	 * @param date 取得対象の日付
 	 * @return 月を取得
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static int getMonth(Date date) {
 		Calendar cal = Calendar.getInstance();
@@ -118,7 +118,7 @@ public class DateUtils {
 	 *
 	 * @param date 取得対象の日付
 	 * @return 日を取得
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static int getDay(Date date) {
 		Calendar cal = Calendar.getInstance();
@@ -132,7 +132,7 @@ public class DateUtils {
 	 * @param month 月 1～12
 	 * @param day 日 1～31
 	 * @return 日付を取得
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static Date getDate(int year, int month, int day) {
 		// Dateを生成
@@ -148,7 +148,7 @@ public class DateUtils {
 	 * @param hour 時 0〜23
 	 * @param min 分 0〜59
 	 * @return 日付を取得
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static Date getDate(int year, int month, int day, int hour, int min) {
 		// Dateを生成
@@ -165,7 +165,7 @@ public class DateUtils {
 	 * @param min 分 0〜59
 	 * @param sec 秒 0〜59
 	 * @return 日付を取得
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static Date getDate(int year, int month, int day, int hour, int min, int sec) {
 		// Dateを生成
@@ -180,7 +180,7 @@ public class DateUtils {
 	 * @param min 分 0〜59
 	 * @param sec 秒 0〜59
 	 * @return 日付を取得
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static Date getDate(Date date, int hour, int min, int sec) {
 		Calendar cal = Calendar.getInstance();
@@ -195,7 +195,7 @@ public class DateUtils {
 	 * 引数{@code date}に対して、時{@code hour}、分{@code min}、秒{@code sec}が00:00:00の日付を取得します。
 	 * @param date 日付
 	 * @return 日付を取得
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static Date getJustDate(Date date) {
 		return getDate(date, 0, 0, 0);

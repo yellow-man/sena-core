@@ -9,7 +9,7 @@ import javax.persistence.Entity;
  * 財務（finances）モデル。
  *
  * @author yellow-man
- * @since 1.0
+ * @since 1.0.0
  */
 @SuppressWarnings("serial")
 @Entity

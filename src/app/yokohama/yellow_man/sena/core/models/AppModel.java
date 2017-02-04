@@ -17,7 +17,7 @@ import play.db.ebean.Model;
  * <p>各モデルはこのクラスを継承する。
  *
  * @author yellow-man
- * @since 1.0
+ * @since 1.0.0
  */
 @MappedSuperclass
 @SuppressWarnings("serial")
@@ -45,7 +45,7 @@ public class AppModel extends Model {
 	/**
 	 * 保存。
 	 * @see play.db.ebean.Model#save()
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	@Override
 	public void save() {
@@ -55,7 +55,7 @@ public class AppModel extends Model {
 	/**
 	 * 更新。
 	 * @see play.db.ebean.Model#update()
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	@Override
 	public void update() {
@@ -65,7 +65,7 @@ public class AppModel extends Model {
 	/**
 	 * 削除フラグを立てて更新。
 	 * @see play.db.ebean.Model#delete()
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public void delete() {
 		this.deleteFlg = true;
@@ -74,7 +74,7 @@ public class AppModel extends Model {
 
 	/**
 	 * 削除フラグを立てる。
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public void setDeleteFlg() {
 		this.deleteFlg = true;

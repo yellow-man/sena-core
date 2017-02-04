@@ -15,7 +15,7 @@ import yokohama.yellow_man.sena.core.models.Stocks;
  * <br>利用する場合、{@link StocksComponent}を経由しアクセスする。
  *
  * @author yellow-man
- * @since 1.0
+ * @since 1.0.0
  */
 public class StocksDao {
 
@@ -23,7 +23,7 @@ public class StocksDao {
 	 * 銘柄（stocks）モデルのバルクインサートを行う。
 	 * @param list バルクインサート対象リスト
 	 * @return INSERT結果件数を返す。
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	protected static int executeBulkInsert(List<Stocks> list) {
 
@@ -75,7 +75,7 @@ public class StocksDao {
 	/**
 	 * 銘柄（stocks）の削除フラグ無効（{@code false}）のレコードを全件削除（{@code true}）する。
 	 * @return UPDATE結果件数を返す。
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	protected static int deleteAll() {
 		String sql = "UPDATE stocks SET delete_flg = true, modified = :modified WHERE delete_flg = false";
