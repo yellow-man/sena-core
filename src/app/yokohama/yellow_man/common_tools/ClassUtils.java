@@ -8,7 +8,7 @@ import ch.qos.logback.classic.Logger;
  * Class関する付属情報を提供します。
  *
  * @author yellow-man
- * @since 1.0
+ * @since 1.0.0
  */
 public class ClassUtils {
 
@@ -19,7 +19,7 @@ public class ClassUtils {
 	 * このメソッドを参照しているメソッド名を返します。
 	 *
 	 * @return このメソッドを参照しているメソッド名を返します。
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static String getMethodName() {
 		Throwable throwable = new Throwable();

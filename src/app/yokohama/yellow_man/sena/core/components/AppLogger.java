@@ -27,7 +27,7 @@ import yokohama.yellow_man.common_tools.StringUtils;
  * </ul>
  *
  * @author yellow-man
- * @since 1.0
+ * @since 1.0.0
  */
 public class AppLogger {
 
@@ -51,7 +51,7 @@ public class AppLogger {
 	 *
 	 * @param loggerName ロガー名
 	 * @param file ファイル出力先
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static void addLoggerFileAppender(String loggerName, String file) {
 		LoggerContext context = (LoggerContext) LoggerFactory.getILoggerFactory();
@@ -82,7 +82,7 @@ public class AppLogger {
 	/**
 	 * 通常のロガーに差し替える。
 	 *
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static void resetLogger() {
 		// ロガーの差し替え
@@ -98,7 +98,7 @@ public class AppLogger {
 	 * <li>その他異常系のエラー
 	 * </ul>
 	 * @param message ログ出力メッセージ
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static void error(String message) {
 		if (MY_LOGGER.isErrorEnabled()) {
@@ -120,7 +120,7 @@ public class AppLogger {
 	 * </ul>
 	 * @param message ログ出力メッセージ
 	 * @param t Throwable
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static void error(String message, Throwable t) {
 		if (MY_LOGGER.isErrorEnabled()) {
@@ -140,7 +140,7 @@ public class AppLogger {
 	 * <li>バリデーションエラー
 	 * </ul>
 	 * @param message ログ出力メッセージ
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static void warn(String message) {
 		if (MY_LOGGER.isWarnEnabled()) {
@@ -161,7 +161,7 @@ public class AppLogger {
 	 * </ul>
 	 * @param message ログ出力メッセージ
 	 * @param t Throwable
-	 * @since 1.1
+	 * @since 1.0.0
 	 */
 	public static void warn(String message, Throwable t) {
 		if (MY_LOGGER.isWarnEnabled()) {
@@ -181,7 +181,7 @@ public class AppLogger {
 	 * <li>複雑な処理のトレース情報
 	 * </ul>
 	 * @param message ログ出力メッセージ
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static void info(String message) {
 		if (MY_LOGGER.isInfoEnabled()) {
@@ -200,7 +200,7 @@ public class AppLogger {
 	 * <li>開発時のデバッグ情報
 	 * </ul>
 	 * @param message ログ出力メッセージ
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static void debug(String message) {
 		if (MY_LOGGER.isDebugEnabled()) {
@@ -217,7 +217,7 @@ public class AppLogger {
 	 * ※キー使用後は必ず{@link #removeMDC(String)}メソッドを呼び出し破棄する。
 	 * @param key キー
 	 * @param val 値
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static void putMDC(String key, String val) {
 		if (StringUtils.isEmptyWithTrim(key)) {
@@ -229,7 +229,7 @@ public class AppLogger {
 	/**
 	 * MDCにセットしたキーを破棄する。
 	 * @param key キー
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static void removeMDC(String key) {
 		if (StringUtils.isEmptyWithTrim(key)) {
@@ -241,7 +241,7 @@ public class AppLogger {
 	/**
 	 * クラスのソースコードファイル名、行番号の文字列を返す。
 	 * @return クラスのソースコードファイル名、行番号の文字列。
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	private static String printFileLine() {
 		Throwable throwable = new Throwable();
@@ -263,7 +263,7 @@ public class AppLogger {
 	 * 例外発生箇所の{@code printStackTrace}文字列を返す。
 	 * @param throwable Throwable
 	 * @return {@code printStackTrace}文字列。
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static String printTrace(Throwable throwable) {
 		StringBuffer sb = new StringBuffer("printTrace[");

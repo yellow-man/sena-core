@@ -8,7 +8,7 @@ import play.mvc.Http.Request;
 /**
  * Requestに関するユーティリティクラス。
  * @author yellow-man
- * @since 1.1
+ * @since 1.0.0
  */
 public class RequestUtilityComponent {
 
@@ -20,7 +20,7 @@ public class RequestUtilityComponent {
 	 * @param request リクエスト
 	 * @param key キー
 	 * @return クエリ文字列
-	 * @since 1.1
+	 * @since 1.0.0
 	 */
 	public static String getQueryString(Request request, String key) {
 		if (request == null
@@ -38,7 +38,7 @@ public class RequestUtilityComponent {
 	 * @param request リクエスト
 	 * @param key キー
 	 * @return Post文字列
-	 * @since 1.1
+	 * @since 1.0.0
 	 */
 	public static String getFromPostString(Request request, String key) {
 		if (request == null
@@ -70,7 +70,7 @@ public class RequestUtilityComponent {
 	 * @param request リクエスト
 	 * @param key キー
 	 * @return Post文字列
-	 * @since 1.1
+	 * @since 1.0.0
 	 */
 	public static String[] getFromPostStrings(Request request, String key) {
 		if (request == null
@@ -100,7 +100,7 @@ public class RequestUtilityComponent {
 	 * リクエストからPostパラメータのMapを取得する。
 	 * @param request リクエスト
 	 * @return PostパラメータのMap
-	 * @since 1.1
+	 * @since 1.0.0
 	 */
 	public static Map<String, String[]> getFromPostMap(Request request) {
 		if (request == null
@@ -126,7 +126,7 @@ public class RequestUtilityComponent {
 	 * @param request リクエスト
 	 * @param key キー
 	 * @return Post文字列
-	 * @since 1.1
+	 * @since 1.0.0
 	 */
 	public static String getFromPostStringNullToBlank(Request request, String key) {
 		if (request == null

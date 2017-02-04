@@ -11,7 +11,7 @@ import ch.qos.logback.classic.Logger;
  * オブジェクトチェックに関する機能を提供します。
  *
  * @author yellow-man
- * @since 1.0
+ * @since 1.0.0
  */
 public class CheckUtils {
 
@@ -27,7 +27,7 @@ public class CheckUtils {
 	 * @return 引数の{@code list}が{@code null}または、
 	 * 			{@link List#isEmpty()}の場合{@code true}。
 	 * 			要素が存在する場合は{@code false}。
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static boolean isEmpty(List<?> list) {
 		if (list == null || list.isEmpty()) {
@@ -45,7 +45,7 @@ public class CheckUtils {
 	 * @return 引数の{@code map}が{@code null}または、
 	 * 			{@link Map#isEmpty()}の場合{@code true}。
 	 * 			要素が存在する場合は{@code false}。
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static boolean isEmpty(Map<?, ?> map) {
 		if (map == null || map.isEmpty()) {
@@ -63,7 +63,7 @@ public class CheckUtils {
 	 * @return 引数の{@code str}が{@code null}または、
 	 * 			{@link Map#isEmpty()}の場合{@code true}。
 	 * 			要素が存在する場合は{@code false}。
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static boolean isEmpty(String str) {
 		if (str == null || str.isEmpty()) {
@@ -81,7 +81,7 @@ public class CheckUtils {
 	 * @return 引数の{@code num}が{@code null}または、
 	 * 			{@link Number#doubleValue()}の結果が0.0以下の場合{@code true}。
 	 * 			要素が存在する場合は{@code false}。
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static boolean isEmpty(Number num) {
 		if (num == null || num.doubleValue() <= 0.0) {

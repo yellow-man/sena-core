@@ -11,7 +11,7 @@ import yokohama.yellow_man.sena.core.models.CompanySchedules;
  * 企業スケジュール（company_schedules）モデルの操作を行うコンポーネントクラス。
  *
  * @author yellow-man
- * @since 1.0
+ * @since 1.0.0
  */
 public class CompanySchedulesComponent {
 
@@ -22,7 +22,7 @@ public class CompanySchedulesComponent {
 	 * @param stockCode 銘柄コード
 	 * @return 直近の決算発表日（{@code settlement_date}）の企業スケジュールを返す。
 	 * 			取得できない場合は、{@code null}を返す。
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static CompanySchedules getCompanySchedulesByStockCode(Integer stockCode) {
 		List<CompanySchedules> list =

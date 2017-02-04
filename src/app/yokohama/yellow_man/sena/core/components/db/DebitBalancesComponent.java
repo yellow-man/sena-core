@@ -12,7 +12,7 @@ import yokohama.yellow_man.sena.core.models.DebitBalances;
  * 信用残（debit_balances）モデルの操作を行うコンポーネントクラス。
  *
  * @author yellow-man
- * @since 1.0
+ * @since 1.0.0
  */
 public class DebitBalancesComponent {
 
@@ -24,7 +24,7 @@ public class DebitBalancesComponent {
 	 * @param limit 取得リミット件数
 	 * @param page 取得ページ番号
 	 * @return 公表日（{@code release_date}）降順の信用残情報を{@code limit}件数分返す。
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static List<DebitBalances> getDebitBalancesListByStockCode(Integer stockCode, int limit, int page) {
 		List<DebitBalances> retList =
@@ -47,7 +47,7 @@ public class DebitBalancesComponent {
 	 *
 	 * @param releaseDate 公表日
 	 * @return 未削除の信用残（debit_balances）情報一覧
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static List<DebitBalances> getDebitBalancesListByDate(Date releaseDate) {
 		List<DebitBalances> retList =
@@ -67,7 +67,7 @@ public class DebitBalancesComponent {
 	 *
 	 * @param releaseDate 公表日
 	 * @return 未削除の信用残（debit_balances）情報一覧 Map<銘柄コード, 信用残>
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static Map<Integer, DebitBalances> getDebitBalancesMapByDate(Date releaseDate) {
 		Map<Integer, DebitBalances> retMap =

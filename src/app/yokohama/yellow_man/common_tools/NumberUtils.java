@@ -10,7 +10,7 @@ import ch.qos.logback.classic.Logger;
  * 数値操作に関する機能を提供します。
  *
  * @author yellow-man
- * @since 1.0
+ * @since 1.0.0
  */
 public class NumberUtils {
 
@@ -23,7 +23,7 @@ public class NumberUtils {
 	 *
 	 * @param str {@code BigDecimal}に変換する文字列
 	 * @return 変換後の値
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static BigDecimal toBigDecimal(String str) {
 		return toBigDecimal(str, "0");
@@ -36,7 +36,7 @@ public class NumberUtils {
 	 * @param str {@code BigDecimal}に変換する文字列
 	 * @param defaultValue デフォルト値（{@code null}をデフォルトとすることも可能です。）
 	 * @return 変換後の値
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static BigDecimal toBigDecimal(String str, String defaultValue) {
 		if (str == null) {

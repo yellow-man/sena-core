@@ -29,7 +29,7 @@ import yokohama.yellow_man.common_tools.DateUtils;
  * google カレンダー操作を行うクラス。
  *
  * @author yellow-man
- * @since 1.0
+ * @since 1.0.0
  */
 public class CalendarComponent {
 
@@ -60,7 +60,7 @@ public class CalendarComponent {
 	/**
 	 * コンストラクタ
 	 * @throws GoogleApiException Google API操作に関する例外クラス
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public CalendarComponent() throws GoogleApiException {
 		// 設定値の確認
@@ -117,7 +117,7 @@ public class CalendarComponent {
 	 * @param summaryStr サマリ文字列
 	 * @return イベント登録が完了した場合{@code true}、失敗した場合{@code false}を返す。
 	 * @throws GoogleApiException Google API操作に関する例外クラス
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public boolean insertEvent(Date eventDate, Integer stockCode, String summaryStr) throws GoogleApiException{
 		boolean ret = false;
@@ -153,7 +153,7 @@ public class CalendarComponent {
 	 * @param eventDate イベント開始日（終了日）
 	 * @return 説明{@code description}に登録された銘柄コードをキーとし、サマリ文字列を値とし返却する。
 	 * @throws GoogleApiException Google API操作に関する例外クラス
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public Map<Integer, String> listEvent(Date eventDate) throws GoogleApiException {
 		Map<Integer, String> retMap = null;

@@ -13,7 +13,7 @@ import ch.qos.logback.classic.Logger;
 /**
  * フィールド操作に関する機能を提供します。
  * @author yellow-man
- * @since 1.0
+ * @since 1.0.0
  */
 public class FieldUtils {
 
@@ -26,7 +26,7 @@ public class FieldUtils {
 	 * @param obj Map化するオブジェクト
 	 * @param excludeList 除外設定（ここで指定された文字列のプロパティはMapから除外します。）
 	 * @return キー{@code Object}の変数名, 値{@code Object}の変数の値
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public static Map<String, Object> toMapField(Object obj, List<String> excludeList) {
 		Map<String, Object> retMap = new HashMap<String, Object>();
@@ -62,7 +62,7 @@ public class FieldUtils {
 	 * 除外設定に{@code null}を指定した{@code FieldUtils#toMapField(obj, null)}と同じ結果が得られます。
 	 * @param obj Map化するオブジェクト
 	 * @return キー{@code Object}の変数名, 値{@code Object}の変数の値
-	 * @since 1.0
+	 * @since 1.0.0
 	 * @see FieldUtils#toMapField(Object, List)
 	 */
 	public static Map<String, Object> toMapField(Object obj) {
@@ -74,7 +74,7 @@ public class FieldUtils {
 	 * <br>また、staticフィールドに置いては文字列変換から除外します。
 	 * @param obj プロパティと、値を文字列変換対象とするオブジェクト
 	 * @return 変換後の文字列。
-	 * @since 1.1
+	 * @since 1.0.0
 	 */
 	public static String toStringField(Object obj) {
 		StringBuffer buff = new StringBuffer(obj.getClass().getName()).append("{");

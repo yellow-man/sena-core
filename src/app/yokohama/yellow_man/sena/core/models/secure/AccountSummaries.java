@@ -10,7 +10,7 @@ import javax.persistence.Entity;
  * 口座サマリー（account_summaries）モデル。
  *
  * @author yellow-man
- * @since 1.1
+ * @since 1.0.0
  */
 @SuppressWarnings("serial")
 @Entity
