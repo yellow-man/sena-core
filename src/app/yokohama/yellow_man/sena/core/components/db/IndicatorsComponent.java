@@ -41,7 +41,7 @@ public class IndicatorsComponent {
 	 * 未削除の指標（indicators）情報一覧をマップで返す。
 	 *
 	 * @param date 取得日
-	 * @return 未削除の指標（indicators）情報一覧 Map<銘柄コード, 指標>
+	 * @return 未削除の指標（indicators）情報一覧 Map＜銘柄コード, 指標＞
 	 * @since 1.0.0
 	 */
 	public static Map<Integer, Indicators> getIndicatorsMapByDate(Date date) {
