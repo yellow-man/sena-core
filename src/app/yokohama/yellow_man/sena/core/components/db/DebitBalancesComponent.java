@@ -66,7 +66,7 @@ public class DebitBalancesComponent {
 	 * 未削除の信用残（debit_balances）情報一覧をマップで返す。
 	 *
 	 * @param releaseDate 公表日
-	 * @return 未削除の信用残（debit_balances）情報一覧 Map<銘柄コード, 信用残>
+	 * @return 未削除の信用残（debit_balances）情報一覧 Map＜銘柄コード, 信用残＞
 	 * @since 1.0.0
 	 */
 	public static Map<Integer, DebitBalances> getDebitBalancesMapByDate(Date releaseDate) {
