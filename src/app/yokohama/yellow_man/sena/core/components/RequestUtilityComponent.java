@@ -34,6 +34,21 @@ public class RequestUtilityComponent {
 	}
 
 	/**
+	 * リクエストからクエリ文字列Mapを取得する。
+	 * @param request リクエスト
+	 * @return クエリ文字列Map
+	 * @since 1.1.0
+	 */
+	public static Map<String, String[]> getQueryString(Request request) {
+		if (request == null) {
+
+			AppLogger.debug("Parameter error：request=" + request);
+			return null;
+		}
+		return request.queryString();
+	}
+
+	/**
 	 * リクエストからkeyのFrom文字列を取得する。
 	 * @param request リクエスト
 	 * @param key キー
@@ -151,5 +166,23 @@ public class RequestUtilityComponent {
 
 		String str = form.asFormUrlEncoded().get(key)[0];
 		return (str == null) ? BLANK : str;
+	}
+
+
+	/**
+	 * リクエストからFrom文字列Mapを取得する。
+	 * @param request リクエスト
+	 * @return Post文字列Map
+	 * @since 1.1.0
+	 */
+	public static Map<String, String[]> getFromPostStringMap(Request request) {
+		if (request == null
+				|| request.body() == null
+				|| request.body().asFormUrlEncoded() == null) {
+
+			AppLogger.debug("Parameter error：request=" + request);
+			return null;
+		}
+		return request.body().asFormUrlEncoded();
 	}
 }
