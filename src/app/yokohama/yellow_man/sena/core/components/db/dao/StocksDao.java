@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import com.avaje.ebean.Ebean;
+import com.avaje.ebean.SqlRow;
 import com.avaje.ebean.SqlUpdate;
 
 import yokohama.yellow_man.sena.core.components.db.StocksComponent;
@@ -82,5 +83,22 @@ public class StocksDao {
 		SqlUpdate sqlUpdate = Ebean.createSqlUpdate(sql);
 		sqlUpdate.setParameter("modified", new Date());
 		return sqlUpdate.execute();
+	}
+
+	/**
+	 * 検索条件に取得日（{@code date}）を指定し、
+	 * 未削除の銘柄（stocks）情報一覧総数を返す。
+	 *
+	 * @param date 取得日
+	 * @return 未削除の銘柄（stocks）情報一覧総数を返す。
+	 * @since 1.1.0
+	 */
+	protected static int getTotalCountByDate(Date date) {
+		String sql = "SELECT count(*) as count FROM stocks WHERE delete_flg = false AND date = :date";
+		SqlRow sqlRow = Ebean.createSqlQuery(sql)
+				.setParameter("date", date)
+				.findUnique();
+
+		return sqlRow.getInteger("count");
 	}
 }

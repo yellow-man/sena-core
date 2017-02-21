@@ -76,4 +76,17 @@ public class StocksComponent extends StocksDao {
 
 		return retList;
 	}
+
+	/**
+	 * 検索条件に取得日（{@code date}）を指定し、
+	 * 未削除の銘柄（stocks）情報一覧総数を返す。
+	 *
+	 * @param date 取得日
+	 * @return 未削除の銘柄（stocks）情報一覧総数を返す。
+	 * @since 1.1.0
+	 * @see StocksDao#getTotalCountByDate(Date)
+	 */
+	public static int getTotalCountByDate(Date date) {
+		return StocksDao.getTotalCountByDate(date);
+	}
 }
