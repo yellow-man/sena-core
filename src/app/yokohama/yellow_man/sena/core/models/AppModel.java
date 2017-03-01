@@ -24,6 +24,7 @@ import play.db.ebean.Model;
 public class AppModel extends Model {
 
 	/** プライマリーキー */
+	@Column(name = "id")
 	@Id
 	@GeneratedValue
 	public Long id;
