@@ -16,7 +16,7 @@ public class ModelUtilityComponent {
 
 	/**
 	 * モデルクラスからカラム名をキー、カラムのプロパティ名を値としたのマップを取得する。
-	 * @param modelClass
+	 * @param modelClass モデルクラス
 	 * @return Map＜カラム名, プロパティ名＞
 	 * @since 1.1.0
 	 */
