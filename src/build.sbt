@@ -9,7 +9,7 @@ libraryDependencies ++= Seq(
   javaEbean,
   cache,
   javaWs,
-  "yokohama.yellow_man"       % "common-tools_2.11"             % "1.0.0",
+  "yokohama.yellow_man"       % "common-tools_2.11"             % "1.1.0",
   "mysql"                     % "mysql-connector-java"          % "5.1.38",
   "net.sf.opencsv"            % "opencsv"                       % "2.3",
   "org.apache.httpcomponents" % "httpclient"                    % "4.5.2",
