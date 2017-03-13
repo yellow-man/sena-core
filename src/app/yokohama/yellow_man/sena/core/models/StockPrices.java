@@ -46,6 +46,6 @@ public class StockPrices extends AppModel {
 
 	/** 調整後終値	（分割実施前の終値を分割後の値に調整したもの、整数部：15桁、小数部：5桁） */
 	@Column(name = "adjusted_closing_price")
-	public BigDecimal adjusted_closing_price;
+	public BigDecimal adjustedClosingPrice;
 
 }
