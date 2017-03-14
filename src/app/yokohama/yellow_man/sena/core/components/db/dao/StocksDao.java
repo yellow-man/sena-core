@@ -25,7 +25,7 @@ public class StocksDao {
 
 	/**
 	 * 銘柄（stocks）モデルのバルクインサートを行う。
-	 * @param list バルクインサート対象リスト
+	 * @param dataList バルクインサート対象リスト
 	 * @return INSERT結果件数を返す。
 	 * @since 1.0.0
 	 */
