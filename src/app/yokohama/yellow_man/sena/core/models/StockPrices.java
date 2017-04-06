@@ -11,6 +11,7 @@ import javax.persistence.Entity;
  *
  * @author yellow-man
  * @since 1.2.0
+ * @version 1.2.2
  */
 @SuppressWarnings("serial")
 @Entity
@@ -48,4 +49,15 @@ public class StockPrices extends AppModel {
 	@Column(name = "adjusted_closing_price")
 	public BigDecimal adjustedClosingPrice;
 
+	/** 分割フラグ（1：分割あり、0：分割無し） */
+	@Column(name = "split_flg")
+	public Boolean splitFlg = false;
+
+	/** 分割前（※例：分割: 1株 -> 1.2株） */
+	@Column(name = "split_from")
+	public BigDecimal splitFrom;
+
+	/** 分割後（※例：分割: 1株 -> 1.2株） */
+	@Column(name = "split_to")
+	public BigDecimal splitTo;
 }

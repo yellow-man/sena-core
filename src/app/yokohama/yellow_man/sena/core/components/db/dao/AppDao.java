@@ -33,7 +33,7 @@ public class AppDao {
 
 		Map<String, String> colMap = ModelUtilityComponent.getColumnMap(modelClass, excludeColumnNameList);
 		// SQLテンプレート作成
-		StringBuilder sqlStringBuffer =
+		StringBuilder sqlStringBuilder =
 				new StringBuilder("INSERT INTO " + tableName + " ( ");
 
 		StringBuilder colBuilder = new StringBuilder();
@@ -43,14 +43,14 @@ public class AppDao {
 		}
 		// 先頭のカンマを除去
 		colBuilder.deleteCharAt(0);
-		sqlStringBuffer.append(colBuilder + " ) VALUES ");
+		sqlStringBuilder.append(colBuilder + " ) VALUES ");
 
 		// バインド変数作成
 		for (int i = 0; i < dataList.size(); i++) {
 			if (0 == i) {
-				sqlStringBuffer.append(" ( ");
+				sqlStringBuilder.append(" ( ");
 			} else {
-				sqlStringBuffer.append(", ( ");
+				sqlStringBuilder.append(", ( ");
 			}
 
 			colBuilder = new StringBuilder();
@@ -60,11 +60,11 @@ public class AppDao {
 			}
 			// 先頭のカンマを除去
 			colBuilder.deleteCharAt(0);
-			sqlStringBuffer.append(colBuilder).append(" ) ");
+			sqlStringBuilder.append(colBuilder).append(" ) ");
 		}
 
 		// バルクインサート用SQL作成
-		SqlUpdate sqlUpdate = Ebean.createSqlUpdate(sqlStringBuffer.toString());
+		SqlUpdate sqlUpdate = Ebean.createSqlUpdate(sqlStringBuilder.toString());
 		int j = 0;
 		for (Object items : dataList) {
 			// フィールド情報を取得する。
