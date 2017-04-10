@@ -53,11 +53,11 @@ public class StockPrices extends AppModel {
 	@Column(name = "split_flg")
 	public Boolean splitFlg = false;
 
-	/** 分割前（※例：分割: 1株 -> 1.2株） */
+	/** 分割前（※例：分割: 1株 → 1.2株） */
 	@Column(name = "split_from")
 	public BigDecimal splitFrom;
 
-	/** 分割後（※例：分割: 1株 -> 1.2株） */
+	/** 分割後（※例：分割: 1株 → 1.2株） */
 	@Column(name = "split_to")
 	public BigDecimal splitTo;
 }
