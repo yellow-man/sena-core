@@ -15,7 +15,7 @@ import yokohama.yellow_man.sena.core.models.StockPrices;
  *
  * @author yellow-man
  * @since 1.2.0
- * @version 1.2.2
+ * @version 1.2.3
  */
 public class StockPricesComponent extends StockPricesDao {
 
@@ -49,7 +49,6 @@ public class StockPricesComponent extends StockPricesDao {
 		return retList;
 	}
 
-
 	/**
 	 * 検索条件に銘柄コード（{@code stock_code}）を指定し、
 	 * 株価テーブルより指定日付範囲内{@code startDate} 〜 {@code endDate}の株価情報 Map＜取得日, 株価情報＞を返す。
@@ -78,6 +77,18 @@ public class StockPricesComponent extends StockPricesDao {
 				expressionList.orderBy("date DESC, id DESC").findMap("date", Date.class);
 
 		return retMap;
+	}
+
+	/**
+	 * 検索条件に銘柄コード（{@code stock_code}）を指定し、
+	 * 株価テーブルより株価情報 Map＜取得日, 株価情報＞を返す。
+	 *
+	 * @param stockCode 銘柄コード
+	 * @return 株価情報 Map＜取得日, 株価情報＞を返す。
+	 * @since 1.2.3
+	 */
+	public static Map<Date, StockPrices> getStockPricesMapByStockCode(Integer stockCode) {
+		return getStockPricesMapByStockCode(stockCode, null, null);
 	}
 
 	/**
