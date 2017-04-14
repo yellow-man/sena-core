@@ -23,7 +23,7 @@ import com.google.api.services.calendar.model.EventDateTime;
 import com.google.api.services.calendar.model.Events;
 
 import play.Play;
-import yokohama.yellow_man.common_tools.DateUtils;
+import yokohama.yellow_man.common_tools.util.DateUtils;
 
 /**
  * google カレンダー操作を行うクラス。

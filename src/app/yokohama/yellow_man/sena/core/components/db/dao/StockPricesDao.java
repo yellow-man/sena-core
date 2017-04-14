@@ -7,7 +7,7 @@ import java.util.Map;
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.SqlUpdate;
 
-import yokohama.yellow_man.common_tools.FieldUtils;
+import yokohama.yellow_man.common_tools.util.FieldUtils;
 import yokohama.yellow_man.sena.core.components.ModelUtilityComponent;
 import yokohama.yellow_man.sena.core.components.db.StockPricesComponent;
 import yokohama.yellow_man.sena.core.models.AppModel;
